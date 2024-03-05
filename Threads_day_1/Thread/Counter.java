@@ -1,4 +1,4 @@
-package Thread;
+package Threads_day_1.Thread;
 
 public class Counter {
     private int count = 0;

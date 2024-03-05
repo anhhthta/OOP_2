@@ -1,4 +1,4 @@
-package ex6_5;
+package review.ex6_5;
 
 public class ResizableCircle extends Circle implements Resizable {
 

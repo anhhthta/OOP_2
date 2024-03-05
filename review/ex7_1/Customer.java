@@ -1,4 +1,4 @@
-package ex7_1;
+package review.ex7_1;
 
 public class Customer {
     private String name;

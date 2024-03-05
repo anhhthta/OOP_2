@@ -1,4 +1,4 @@
-package Thread;
+package Threads_day_1.Thread;
 
 public class IncrementThread extends Thread{
     private Counter counter;

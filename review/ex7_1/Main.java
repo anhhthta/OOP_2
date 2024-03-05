@@ -1,4 +1,4 @@
-package ex7_1;
+package review.ex7_1;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

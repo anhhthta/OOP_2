@@ -1,4 +1,4 @@
-package ex6_5;
+package review.ex6_5;
 
 public class main {
     public static void main(String[] args) {
