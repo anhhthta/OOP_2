@@ -1,0 +1,37 @@
+-> Thực hiện tính trung bình: 
+name: HA, avg: 10.0
+name: KK, avg: 2.6666666666666665
+name: KK, avg: 2.3333333333333335
+name: KT, avg: 9.666666666666666
+name: LO, avg: 6.0
+name: LA, avg: 5.666666666666667
+-> Thực hiện in danh sách: 
+Student: id='1', name='HA', gender='nam', mP= 10 , mJ= 10, 10.0, dau
+Student: id='2', name='KK', gender='nam', mP= 6 , mJ= 1, 2.6666666666666665, truot
+Student: id='3', name='KK', gender='nu', mP= 5 , mJ= 1, 2.3333333333333335, dau
+Student: id='4', name='KT', gender='nu', mP= 9 , mJ= 10, 9.666666666666666, dau
+Student: id='5', name='LO', gender='nam', mP= 10 , mJ= 4, 6.0, dau
+Student: id='LA', name='LA', gender='nu', mP= 5 , mJ= 6, 5.666666666666667, dau
+-> Thực hiện sắp xếp: 
+-> Thực hiện in danh sách: 
+Student: id='1', name='HA', gender='nam', mP= 10 , mJ= 10, 10.0, dau
+Student: id='4', name='KT', gender='nu', mP= 9 , mJ= 10, 9.666666666666666, dau
+Student: id='5', name='LO', gender='nam', mP= 10 , mJ= 4, 6.0, dau
+Student: id='LA', name='LA', gender='nu', mP= 5 , mJ= 6, 5.666666666666667, dau
+Student: id='2', name='KK', gender='nam', mP= 6 , mJ= 1, 2.6666666666666665, truot
+Student: id='3', name='KK', gender='nu', mP= 5 , mJ= 1, 2.3333333333333335, dau
+-> Thực hiện tìm kiếm người tên: LA
+Student: id='LA', name='LA', gender='nu', mP= 5 , mJ= 6
+-> Thực hiện tìm kiếm người tên: KK
+Student: id='2', name='KK', gender='nam', mP= 6 , mJ= 1
+Student: id='3', name='KK', gender='nu', mP= 5 , mJ= 1
+-> Thực hiện tìm kiếm người tên: j
+Not Found!
+-> Thực hiện in danh sách người đậu: 
+Student: id='1', name='HA', gender='nam', mP= 10 , mJ= 10
+Student: id='4', name='KT', gender='nu', mP= 9 , mJ= 10
+Student: id='5', name='LO', gender='nam', mP= 10 , mJ= 4
+Student: id='LA', name='LA', gender='nu', mP= 5 , mJ= 6
+Student: id='3', name='KK', gender='nu', mP= 5 , mJ= 1
+-> Thực hiện in danh sách người trượt: 
+Student: id='2', name='KK', gender='nam', mP= 6 , mJ= 1

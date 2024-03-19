@@ -1,0 +1,6 @@
+Student: id='1', name='HA', gender='nam', mP= 10 , mJ= 10
+Student: id='2', name='KK', gender='nam', mP= 6 , mJ= 1
+Student: id='3', name='KK', gender='nu', mP= 5 , mJ= 1
+Student: id='4', name='KT', gender='nu', mP= 9 , mJ= 10
+Student: id='5', name='LO', gender='nam', mP= 10 , mJ= 4
+Student: id='LA', name='LA', gender='nu', mP= 5 , mJ= 6
