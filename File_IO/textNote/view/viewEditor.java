@@ -1,20 +1,27 @@
-package File_IO.textNote;
+package File_IO.textNote.view;
+
+import File_IO.textNote.controller.controllerEditor;
+import File_IO.textNote.model.modelEditor;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
-public class view extends JFrame {
+public class viewEditor extends JFrame {
     private JPanel contentPane;
-    public model model;
+    public modelEditor model;
     public JTextArea textArea;
 
     public static void main(String[] args){
+        List<String> a =  new ArrayList<String>();
+
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                view frame = new view();
+                viewEditor frame = new viewEditor();
                 try {
                     UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                 } catch (Exception e) {
@@ -25,8 +32,8 @@ public class view extends JFrame {
         });
     }
 
-    public view(){
-        this.model = new model();
+    public viewEditor(){
+        this.model = new modelEditor();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 650, 400);
@@ -43,7 +50,7 @@ public class view extends JFrame {
         JScrollPane scrollPane = new JScrollPane(textArea);
         contentPane.add(scrollPane, BorderLayout.CENTER);
 
-        ActionListener actionListener = new controller(this);
+        ActionListener actionListener = new controllerEditor(this);
 
 //		==========================Menu Bar============================
         JMenuBar menuBar = new JMenuBar();
@@ -63,6 +70,10 @@ public class view extends JFrame {
         JMenuItem btnSave = new JMenuItem("Save");
         btnSave.addActionListener(actionListener);
         menu.add(btnSave);
+
+        JMenuItem fileTree = new JMenuItem("Files Tree");
+        fileTree.addActionListener(actionListener);
+        menu.add(fileTree);
 
 //		==============================================================
 

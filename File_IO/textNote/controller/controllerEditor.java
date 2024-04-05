@@ -1,4 +1,7 @@
-package File_IO.textNote;
+package File_IO.textNote.controller;
+
+import File_IO.textNote.view.viewEditor;
+import File_IO.textNote.view.viewFileTree;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -6,10 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 
-public class controller implements ActionListener {
-    private view view;
+public class controllerEditor implements ActionListener {
+    private viewEditor view;
 
-    public controller(view view){
+    public controllerEditor(viewEditor view){
         this.view = view;
     }
 
@@ -17,9 +20,6 @@ public class controller implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
         JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter txtFilter = new FileNameExtensionFilter("txt files (*.txt)", "txt", "doc", "docx", "pfd");
-        fileChooser.addChoosableFileFilter(txtFilter);
-        fileChooser.setFileFilter(txtFilter);
 
         String fileName;
         if(command.equals("Save")){
@@ -31,12 +31,7 @@ public class controller implements ActionListener {
 
                 if(returnVal == JFileChooser.APPROVE_OPTION){
                     File file = fileChooser.getSelectedFile();
-                    if(!file.getName().toLowerCase().endsWith(".txt") &&
-                            !file.getName().toLowerCase().endsWith(".doc") &&
-                            !file.getName().toLowerCase().endsWith(".doc") &&
-                            !file.getName().toLowerCase().endsWith(".pfd")){
-                        file = new File(file.getParentFile(), file.getName() + ".txt");
-                    }
+
                     fileName = file.getAbsolutePath();
 
                     save(fileName);
@@ -50,10 +45,6 @@ public class controller implements ActionListener {
             if(returnVal == JFileChooser.APPROVE_OPTION) {
                 File file = fileChooser.getSelectedFile();
                 fileName = file.getAbsolutePath();
-
-                if(fileName.endsWith(".txt") || fileName.endsWith(".doc") ||
-                        fileName.endsWith(".docx") || fileName.endsWith(".pdf")
-                ){
                     this.view.model.setFileName(fileName);
                     try {
                         FileInputStream fileInputStream = new FileInputStream(file.getAbsoluteFile());
@@ -73,7 +64,6 @@ public class controller implements ActionListener {
                     } catch (IOException e1) {
                         // TODO Auto-generated catch block
                         e1.printStackTrace();
-                    }
                 }
             }
         }  else if (command.endsWith("New File")) {
@@ -83,6 +73,9 @@ public class controller implements ActionListener {
                 this.view.setTitle("No Name");
             }
             this.view.textArea.setText("");
+        } else if(command.equals("Files Tree")) {
+            viewFileTree filetree = new viewFileTree(view);
+            filetree.setVisible(true);
         }
     }
 
